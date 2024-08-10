@@ -5,9 +5,12 @@
 class UsuarioController{
 
     public static function create(){
+    
+        $data = json_decode(file_get_contents("php://input"),true);
+        var_dump($data);
         $database = new Database('localhost','wordpress1','root','');
         $conn = $database->getConnection();
-        var_dump($conn);
+        
         echo "Esta es la vista de crear";
     }
 

@@ -32,7 +32,7 @@ $router->get("/usuario",function(){
 });
 
 
-$router->get("/usuario/create",[UsuarioController::class,'create']);
+$router->post("/usuario/create",[UsuarioController::class,'create']);
 
 $router->get("/usuario/edit/{usuario}",[UsuarioController::class,'edit']);
 
