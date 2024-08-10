@@ -46,12 +46,4 @@ $router->get("/usuario/{profile}",function($profile){
 
 
 
-
-
-
-
-
-
-
-
 $router->run();
