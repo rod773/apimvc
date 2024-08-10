@@ -6,10 +6,10 @@ class UsuarioController{
 
     public static function create(){
     
-        $data = json_decode(file_get_contents("php://input"),true);
+       
         
 
-        $usuarioModel = new UsuarioModel($data);
+        $usuarioModel = new UsuarioModel();
 
         $usuarioModel->insert();
         
