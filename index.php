@@ -11,6 +11,8 @@ require __DIR__ . '/app/Database.php';
 
 $router = new \Bramus\Router\Router();
 
+
+
 $router->get("/usuario",function(){
 
     $database = new Database('localhost','wordpress1','root','');
