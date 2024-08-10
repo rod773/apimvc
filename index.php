@@ -4,7 +4,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-require __DIR__ . '/app/Http/controllers/UsuarioController.php';
+require __DIR__ . '/app/Controllers/UsuarioController.php';
 
 
 $router = new \Bramus\Router\Router();
