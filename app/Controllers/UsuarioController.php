@@ -1,6 +1,7 @@
 <?php
 
 
+
 class UsuarioController{
 
     public static function create(){
