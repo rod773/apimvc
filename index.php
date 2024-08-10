@@ -18,6 +18,8 @@ $router->get("/usuario",function(){
 
 $router->get("/usuario/create",[UsuarioController::class,'create']);
 
+$router->get("/usuario/edit/{usuario}",[UsuarioController::class,'edit']);
+
 $router->get("/usuario/{profile}",function($profile){
 
     echo "Hola soy la página de usuario del perfil {$profile}";
