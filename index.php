@@ -1,19 +1,23 @@
 <?php
 
 
-// Require composer autoloader
+
 require __DIR__ . '/vendor/autoload.php';
 
-// Create Router instance
+
 $router = new \Bramus\Router\Router();
 
-$router->get("/",function(){
+$router->get("/usuario",function(){
 
-    echo json_encode([
-        "message"=>"Hola Mundo"
-    ]);
+    echo "Hola soy la página de usuario";
 
 });
 
-// Run it!
+$router->get("/usuario/{profile}",function($profile){
+
+    echo "Hola soy la página de usuario del perfil {$profile}";
+
+});
+
+
 $router->run();
