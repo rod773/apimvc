@@ -6,9 +6,6 @@ class UsuarioController{
 
     public static function create(){
     
-       
-        
-
         $usuarioModel = new UsuarioModel();
 
         $usuarioModel->insert();
