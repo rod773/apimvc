@@ -10,6 +10,9 @@ $router->get("/usuario",function(){
 
     //if user name and password are correct, generate bearer token
     // to send autorization bearer token
+
+    echo ($_SERVER['HTTP_AUTHORIZATION']);
+    echo "<br>";
     $usuario = "rod";
     $iss = $_SERVER['SERVER_NAME'];
     $sub = $usuario;
