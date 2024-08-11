@@ -1,10 +1,35 @@
 <?php
 
+use Firebase\JWT\JWT;
+
 $router = new \Bramus\Router\Router();
 
 
 
 $router->get("/usuario",function(){
+    $usuario = "rod";
+    $iss = $_SERVER['SERVER_NAME'];
+    $sub = $usuario;
+    $iat = time();
+    $exp = time() + (60 * 60 * 24);
+
+    $payload = [
+        'iss' => $iss,
+        'sub' => $sub,
+        'iat' => $iat,
+        'exp' => $exp,
+    ];
+
+    $key = '90481cd8c9b821da4a6f8a6aa72b4867b71986555819865f522111e71052e3ef';
+
+    $jwt = JWT::encode($payload, $key, 'HS256');
+
+    $jwt_token = $jwt;
+
+    echo "token : ".$jwt_token;
+
+    echo "<br>";
+
 
     $database = new Database('localhost','wordpress1','root','');
     $conn = $database->getConnection();
