@@ -7,6 +7,9 @@ $router = new \Bramus\Router\Router();
 
 
 $router->get("/usuario",function(){
+
+    //if user name and password are correct, generate bearer token
+    // to send autorization bearer token
     $usuario = "rod";
     $iss = $_SERVER['SERVER_NAME'];
     $sub = $usuario;
